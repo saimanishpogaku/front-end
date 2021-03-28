@@ -1,0 +1,12 @@
+<%- include('../templates/head') %>
+
+<h1>Users Dashboard</h1>
+<h2>Username: </h2><p id="username"></p>
+
+<%- include('../templates/footer') %>
+<script>
+    let data = sessionStorage.getItem('data');
+    data = JSON.parse(data);
+    console.log(data);debugger;
+    $("#username").html(data.username);
+</script>
